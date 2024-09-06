@@ -36,5 +36,5 @@ print(my_new_car.get_descriptive_name())
 my_new_car.update_odometer(23_500)
 my_new_car.read_odometer()
 
-my_new_car.increment_odometer(100)
+my_new_car.increment_odometer(1000)
 my_new_car.read_odometer()
