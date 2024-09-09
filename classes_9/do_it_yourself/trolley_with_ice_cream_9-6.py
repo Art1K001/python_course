@@ -10,14 +10,15 @@ class Restaurant:
     def open_restaurant(self):
         print(f"{self.name.title()} is open")
 
+""" Написати класс візочок з морозивом , має наслідувати клас Ресторан """
 class IceCreamStand(Restaurant):
-
-    def __init__(self, flavors):
+    """додати атрибут Наповнювачі(має містити список)"""
+    def __init__(self, restaurant_name, cuisine_type ,flavors):
+        super().__init__(restaurant_name, cuisine_type)
         self.flavors = flavors
-
-my_restaurant = Restaurant("сhina town", "italiano")
-print(f"{my_restaurant.name.title()} at this restaurant you feel like chinese people")
-print(f"{my_restaurant.type.title()} food like mafia")
-my_restaurant.open_restaurant()
-my_restaurant.describe_restaurant()
-
+    def show_flavors(self):
+        print("avaluable list of ice cream: ")
+        for flavor in self.flavors:
+            print(f"{flavor}")
+my_icecream_stand = IceCreamStand("Cool Ice", "ice cream", ["vanilla", "mango", "pistacho"] )
+my_icecream_stand.show_flavors()
