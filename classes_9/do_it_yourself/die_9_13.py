@@ -2,13 +2,13 @@ import random
 
 class Die:
 
-    def __init__(self, sides=0):
+    def __init__(self, sides=6):
         self.sides = sides
 
     def roll(self):
         return random.randint(1, self.sides)
 
-six_sided_die = Die(6)
+six_sided_die = Die()
 print("Six sides:")
 for die in range(10):
     print(f"\t{six_sided_die.roll()}")
