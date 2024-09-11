@@ -2,23 +2,23 @@ import random
 
 class Die:
 
-    def __init__(self, sides=6):
+    def __init__(self, sides=0):
         self.sides = sides
 
     def roll(self):
         return random.randint(1, self.sides)
 
-six_sided_die = Die()
-print("Six times:")
+six_sided_die = Die(6)
+print("Six sides:")
 for die in range(10):
     print(f"\t{six_sided_die.roll()}")
 
 ten_sided_die = Die(10)
-print("Ten times:")
+print("Ten sides:")
 for die in range(10):
     print(f"\t{ten_sided_die.roll()}")
 
 twenty_sided_die = Die(20)
-print("Twenty times:")
+print("Twenty sides:")
 for die in range(10):
     print(f"\t{twenty_sided_die.roll()}")
